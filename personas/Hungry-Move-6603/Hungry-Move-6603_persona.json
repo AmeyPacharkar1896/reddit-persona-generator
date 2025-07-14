@@ -2,14 +2,14 @@
     "name": "Hungry-Move-6603",
     "key_interests_and_communities": [
         {
-            "interest": "Food and cooking",
+            "interest": "Food and healthy eating",
             "citations": [
                 4,
                 9
             ]
         },
         {
-            "interest": "Cars and driving",
+            "interest": "Traffic and vehicle culture in India",
             "citations": [
                 5,
                 6,
@@ -18,13 +18,11 @@
             ]
         },
         {
-            "interest": "Indian Politics and Society",
+            "interest": "Corruption and bribery in India",
             "citations": [
                 1,
                 2,
-                3,
-                8,
-                12
+                8
             ]
         }
     ],
@@ -34,14 +32,10 @@
             "citations": []
         },
         "location": {
-            "value": "Currently Lucknow, previously Delhi",
+            "value": "Currently Lucknow, Uttar Pradesh, India; previously Delhi, India",
             "citations": [
                 12
             ]
-        },
-        "gender": {
-            "value": "Unknown",
-            "citations": []
         }
     },
     "personality": {
@@ -57,7 +51,7 @@
             ]
         },
         "justification": {
-            "value": "The user makes observations about societal issues (bribery, car stickers) and expresses strong opinions about them.",
+            "value": "The user makes observations about bribery and traffic culture in India, and expresses strong opinions on these matters.",
             "citations": [
                 1,
                 2,
@@ -70,17 +64,20 @@
     },
     "motivations": [
         {
-            "motivation": "To understand societal issues in India",
+            "motivation": "To understand and discuss social issues in India",
             "citations": [
                 1,
                 2,
                 3,
+                5,
+                6,
+                7,
                 8,
                 12
             ]
         },
         {
-            "motivation": "To find healthy and quick meal options",
+            "motivation": "To find healthy and convenient meal options",
             "citations": [
                 4,
                 9
@@ -89,20 +86,21 @@
     ],
     "frustrations_pain_points": [
         {
-            "frustration": "Bribery and corruption in India",
+            "frustration": "Corruption and bribery in law enforcement",
             "citations": [
                 1,
-                2
+                2,
+                8
             ]
         },
         {
-            "frustration": "Poor quality and unhealthy food options",
+            "frustration": "Poor quality of food in tiffin services",
             "citations": [
                 9
             ]
         },
         {
-            "frustration": "Excessive car stickers in Lucknow",
+            "frustration": "Excessive stickers on cars in Lucknow",
             "citations": [
                 12
             ]
@@ -110,21 +108,23 @@
     ],
     "goals_and_needs": [
         {
-            "goal": "To find solutions to societal problems",
+            "goal": "To share experiences and opinions about Indian society",
             "citations": [
-                8
-            ]
-        },
-        {
-            "goal": "To improve their diet",
-            "citations": [
-                9
+                1,
+                2,
+                3,
+                5,
+                6,
+                7,
+                8,
+                9,
+                12
             ]
         }
     ],
     "behavior_and_habits": [
         {
-            "habit": "Posts frequently on various Indian subreddits",
+            "habit": "Frequently posts on Indian-related subreddits",
             "citations": [
                 1,
                 2,
@@ -142,9 +142,9 @@
         }
     ],
     "quote": {
-        "value": "What is the obsession peeps.",
+        "value": "\u201cIts about the volume/%. The number of cars having these stickers is way too high compared to Delhi, or anywhere else.\u201d",
         "citations": [
-            12
+            6
         ]
     }
 }
