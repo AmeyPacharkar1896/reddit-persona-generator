@@ -1,0 +1,150 @@
+{
+    "name": "Hungry-Move-6603",
+    "key_interests_and_communities": [
+        {
+            "interest": "Food and cooking",
+            "citations": [
+                4,
+                9
+            ]
+        },
+        {
+            "interest": "Cars and driving",
+            "citations": [
+                5,
+                6,
+                7,
+                12
+            ]
+        },
+        {
+            "interest": "Indian Politics and Society",
+            "citations": [
+                1,
+                2,
+                3,
+                8,
+                12
+            ]
+        }
+    ],
+    "demographics": {
+        "age_range": {
+            "value": "Unknown",
+            "citations": []
+        },
+        "location": {
+            "value": "Currently Lucknow, previously Delhi",
+            "citations": [
+                12
+            ]
+        },
+        "gender": {
+            "value": "Unknown",
+            "citations": []
+        }
+    },
+    "personality": {
+        "spectrum": {
+            "value": "Observant and opinionated",
+            "citations": [
+                1,
+                2,
+                5,
+                6,
+                7,
+                12
+            ]
+        },
+        "justification": {
+            "value": "The user makes observations about societal issues (bribery, car stickers) and expresses strong opinions about them.",
+            "citations": [
+                1,
+                2,
+                5,
+                6,
+                7,
+                12
+            ]
+        }
+    },
+    "motivations": [
+        {
+            "motivation": "To understand societal issues in India",
+            "citations": [
+                1,
+                2,
+                3,
+                8,
+                12
+            ]
+        },
+        {
+            "motivation": "To find healthy and quick meal options",
+            "citations": [
+                4,
+                9
+            ]
+        }
+    ],
+    "frustrations_pain_points": [
+        {
+            "frustration": "Bribery and corruption in India",
+            "citations": [
+                1,
+                2
+            ]
+        },
+        {
+            "frustration": "Poor quality and unhealthy food options",
+            "citations": [
+                9
+            ]
+        },
+        {
+            "frustration": "Excessive car stickers in Lucknow",
+            "citations": [
+                12
+            ]
+        }
+    ],
+    "goals_and_needs": [
+        {
+            "goal": "To find solutions to societal problems",
+            "citations": [
+                8
+            ]
+        },
+        {
+            "goal": "To improve their diet",
+            "citations": [
+                9
+            ]
+        }
+    ],
+    "behavior_and_habits": [
+        {
+            "habit": "Posts frequently on various Indian subreddits",
+            "citations": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        }
+    ],
+    "quote": {
+        "value": "What is the obsession peeps.",
+        "citations": [
+            12
+        ]
+    }
+}
