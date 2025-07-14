@@ -1,0 +1,52 @@
+**Name:** kojied
+
+**Demographics:**
+
+* **Age Range:** Appears to be between 25-35 years old. This is inferred from their familiarity with Gen Z coming-of-age movies [Citation: 12], their usage of  modern technology and apps like Robinhood [Citation: 29], and their interest in the latest tech like Apple Vision Pro [Citation: 10, 38].  Their career in iOS development also points to a more established professional [Citation: 27].
+* **Location:** Likely resides in New York City, USA.  This is strongly suggested by references to Washington Square Park [Citation: 6], specific New York City restaurants [Citation: 15], and detailed descriptions of New York City nightlife [Citation: 21].
+* **Occupation:** Works as an iOS developer [Citation: 27].  They also show some understanding of finance and trading options [Citation: 13, 29, 52], suggesting a possible side hustle or interest.
+* **Relationship Status:** Not enough information is provided to determine relationship status.
+
+**Personality:**
+
+* **Spectrum:** Analytical/Creative.  kojied demonstrates analytical thinking in their approach to finance [Citation: 13, 29, 52], game strategy [Citation: 9, 22, 44, 46, 47], and technology [Citation: 10, 27, 38]. However, they also show a creative side through their interest in art [Citation: 56], their app idea [Citation: 57], and their appreciation for different cultures and media [Citation: 18, 28].
+
+**Motivations:**
+
+* Learning: kojied actively seeks knowledge in various fields, including finance [Citation: 13], game strategy [Citation: 9, 22, 44, 46, 47], technology [Citation: 10, 27, 38, 51], and even history [Citation: 28]. They express a desire to understand better their purchasing habits [Citation: 57].
+* Career Growth: Their work as an iOS developer and exploration of Vision Pro's potential for workflow integration shows a professional focus [Citation: 27, 38].
+* Specific Hobbies: kojied enjoys video games [Citation: 5, 25], basketball [Citation: 7, 35, 41, 62], and exploring New York City's cultural scene [Citation: 15, 21, 56].
+
+**Frustrations/Pain Points:**
+
+* Lack of late-game content in video games [Citation: 5].
+* High costs of put options in the stock market [Citation: 13].
+* Inefficient transfer limits with Robinhood [Citation: 29].
+* Excessive advertising and gambling in basketball [Citation: 35, 61].
+* Limitations in Apple Vision Pro's current capabilities for work [Citation: 38].
+* The lack of engagement in the NFT community [Citation: 49].
+* The degradation of AI quality [Citation: 51].
+* The difficulty maintaining character consistency in photorealistic digital art [Citation: 23].
+* Difficulty in managing resources in city-building games [Citation: 31, 34, 58].
+
+**Goals & Needs:**
+
+* To improve their options trading strategy [Citation: 13].
+* To learn how to efficiently manage resources and cities in games [Citation: 9, 22, 31, 34, 44, 46, 58].
+* To successfully integrate their workflow into Apple Vision Pro [Citation: 38].
+* To develop a better mental model for purchasing decisions [Citation: 57].
+* To understand the broader context of history [Citation: 28].
+* To understand how the world's wealthiest exert influence [Citation: 43].
+
+**Behavior & Habits:**
+
+* Actively participates in online discussions related to gaming, finance, technology, and culture [Citation: Multiple posts].
+* Frequents bars and enjoys New York City nightlife [Citation: 21].
+* Eats at various restaurants across NYC [Citation: 15].
+* Follows basketball closely [Citation: 7, 35, 41, 62].
+* Plays video games, though rarely finishes them [Citation: 5].
+* Trades options and invests in the stock market [Citation: 13, 29, 52].
+* Has experience in iOS development [Citation: 27] and is exploring the possibilities of VisionOS.
+
+
+**Quote:** "I'm sure it'll get resolved down the line (more of a software issue than hardware constraints), but curious to hear how realistic it is for people to port over their workflow to AVP, and what apps you'd like to see ASAP." [Citation: 38]  This quote encapsulates their inquisitive nature and forward-looking perspective regarding technology.
