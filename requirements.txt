@@ -1,3 +1,4 @@
-praw 
-python-dotenv 
+praw
+python-dotenv
 google-generativeai
+pytest

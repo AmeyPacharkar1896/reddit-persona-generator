@@ -1,57 +1,79 @@
 # persona_generator.py
 import os
+import re
 import google.generativeai as genai
 from dotenv import load_dotenv
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-def generate_persona(username: str, reddit_data: list[str]) -> str:
+def generate_persona(username: str, reddit_data: list[dict]) -> str:
     """
     Generates a user persona using an LLM based on their Reddit data.
-
-    Args:
-        username: The Reddit username.
-        reddit_data: A list of the user's comments and posts.
-
-    Returns:
-        A string containing the user persona.
     """
     if not reddit_data:
-        return "Could not generate persona due to lack of data."
+        return '{"error": "Could not generate persona due to lack of data."}'
 
-    # Format the data for the prompt, adding citation numbers
     formatted_data = ""
     for i, item in enumerate(reddit_data):
-        formatted_data += f"--- COMMENT/POST {i+1} ---\n{item}\n\n"
+        subreddit = item.get('subreddit', 'unknown')
+        content = item.get('content', '')
+        formatted_data += f"--- SOURCE {i+1} (from r/{subreddit}) ---\n{content}\n\n"
 
-    # The prompt is engineered to match the example persona's structure
-    # and explicitly asks for citations.
+    # --- THIS PROMPT IS NOW MORE STRICT AND EXPLICIT ---
     prompt = f"""
-    **Objective:** Analyze the following Reddit comments and posts to create a detailed user persona for the user '{username}'. The persona should be based *only* on the provided text.
+    **Objective:** Analyze the following Reddit data to create a detailed user persona for '{username}'. Base the persona *only* on the provided text.
 
-    **Persona Structure Required:**
-    - **Name:** {username}
-    - **Demographics:** Infer potential age range, location, occupation, and relationship status. Use phrases like 'Appears to be...', 'Likely...', or state if there's not enough information.
-    - **Personality:** Use a simple spectrum (e.g., Introvert/Extrovert, Analytical/Creative). Briefly justify your choice.
-    - **Motivations:** What drives this user? (e.g., Learning, career growth, helping others, specific hobbies).
-    - **Frustrations/Pain Points:** What problems or annoyances do they express?
-    - **Goals & Needs:** What are they trying to achieve or what do they need?
-    - **Behavior & Habits:** Summarize their online behavior and mentioned lifestyle habits.
-    - **Quote:** A representative quote that captures their essence.
+    **CRITICAL OUTPUT INSTRUCTIONS:**
+    1.  Your final output MUST be a single, valid JSON object. Do not include any text or markdown outside of the JSON structure.
+    2.  For **every single point, characteristic, or item**, you MUST cite the source number(s) it is based on in a "citations" array.
 
-    **CRITICAL INSTRUCTION: For every single point you make in the persona, you MUST cite the specific comment or post number it is based on. Use the format [Citation: X, Y, Z].** If a point is synthesized from multiple sources, cite them all.
+    **REQUIRED JSON STRUCTURE:**
+    -   For lists (like `key_interests_and_communities`, `motivations`, `frustrations_pain_points`, `goals_and_needs`), **EACH item in the list MUST be a JSON object** containing the point itself and its "citations" array.
+    -   For direct values (like `demographics`), the value should be an object containing the "value" and its "citations".
+
+    **Example JSON Structure to Follow Meticulously:**
+    {{
+      "name": "{username}",
+      "key_interests_and_communities": [
+        {{ "interest": "iOS Development", "citations": [27, 55] }},
+        {{ "interest": "Basketball", "citations": [7, 35, 45] }}
+      ],
+      "demographics": {{
+        "age_range": {{ "value": "Likely 25-35", "citations": [12, 29, 10] }},
+        "location": {{ "value": "New York City, USA", "citations": [6, 15] }}
+      }},
+      "personality": {{
+          "spectrum": {{"value": "Analytical/Creative", "citations": [13, 56]}},
+          "justification": {{"value": "The user shows analytical thinking in finance [13, 29] but also a creative side in art [56].", "citations": [13, 29, 56]}}
+      }},
+      "motivations": [
+          {{ "motivation": "Learning about new tech", "citations": [10, 38] }},
+          {{ "motivation": "Improving game strategy", "citations": [9, 44] }}
+      ],
+      "frustrations_pain_points": [
+          {{ "frustration": "High cost of options", "citations": [13] }}
+      ],
+      "goals_and_needs": [
+          {{ "goal": "To integrate Vision Pro into workflow", "citations": [38] }}
+      ],
+      "behavior_and_habits": [
+          {{ "habit": "Frequently posts on tech subreddits", "citations": [27, 38] }}
+      ],
+      "quote": {{ "value": "A representative quote from the user.", "citations": [38] }}
+    }}
 
     **Reddit Data to Analyze:**
     {formatted_data}
 
-    **Output:** Now, generate the complete user persona based on the rules above.
+    **Output:**
     """
 
     print("Generating persona with LLM...")
     try:
         model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(prompt)
-        return response.text
+        cleaned_response = re.sub(r'^```json\s*|\s*```$', '', response.text.strip(), flags=re.MULTILINE)
+        return cleaned_response
     except Exception as e:
-        return f"Error generating persona: {e}"
+        return f'{{"error": "An exception occurred: {str(e)}"}}'
